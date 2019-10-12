@@ -12,6 +12,13 @@ library(leaflet)
 library(shinyjs)
 library(V8)
 library(reshape)
+###################################################
+# Install devtools, if you haven't already.
+install.packages("devtools")
+
+library(devtools)
+install_github("shinyGlobe", "trestletech")
+##################################################
 
 attack_freq_country <- readRDS("attack_freq_country.rds")
 shiny_logistic <- readRDS("shiny_logistic.rds")
