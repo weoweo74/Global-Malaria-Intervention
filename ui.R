@@ -1,3 +1,8 @@
+# Install devtools, if you haven't already.
+install.packages("devtools")
+
+library(devtools)
+install_github("shinyGlobe", "trestletech")
 library(shiny)
 library(shinyGlobe)
 library(ggplot2)
