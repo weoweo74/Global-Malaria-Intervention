@@ -1,9 +1,12 @@
 ###################################################
-# Install devtools, if you haven't already.
+# for the CRAN version
 install.packages("devtools")
+devtools::install_github("shinyGlobe", "trestletech")
+library(shinyGlobe)
+Install_github repo trestletech/shinyGlobe
 
-library(devtools)
-install_github("shinyGlobe", "trestletech")
+
+
 ##################################################
 
 library(shiny)
