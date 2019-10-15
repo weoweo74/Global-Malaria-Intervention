@@ -1,17 +1,17 @@
 ###################################################
 # for the CRAN version
- # devtools::install_github("trestletech/shinyGlobe", force = TRUE)
+# devtools::install_github("trestletech/shinyGlobe", force = TRUE)
 ###################################################
 # Install devtools, if you haven't already.
 #install.packages("devtools")
 
-devtools::install_github("trestletech/shinyGlobe", force = TRUE)
-install.packages("shinyGlobe")
-githubinstall("shinyGlobe")
+############WORK VIA GITHUB is below##############
+#devtools::install_github("trestletech/shinyGlobe", force = TRUE)
+#install.packages("shinyGlobe")
+#githubinstall("shinyGlobe")
 
 
 ##################################################
-
 library(shiny)
 library(shinyGlobe)
 library(ggplot2)
@@ -178,7 +178,7 @@ shinyServer(function(input, output, session) {
                                                  text = ~paste(paste("Total Malaria:", ones), attack_type,
                                                                sep = "<br />"), colors = c("red","blue","green","orange")) %>%
                                        layout(
-                                                 xaxis = list(range = c(1969, 2016),zeroline = TRUE, title = ""),
+                                                 xaxis = list(range = c(2010, 2019),zeroline = TRUE, title = ""),
                                                  yaxis = list(side = 'left', rangemode = "tozero", overlaying = "y", 
                                                               title = 'SQRT(Number of Malaria)',showgrid = TRUE, 
                                                               zeroline = TRUE,range = c(0, 100),showticklabels = TRUE),
@@ -290,7 +290,7 @@ shinyServer(function(input, output, session) {
                                                     text = ~paste(paste("Total Malaria:", ones), type,
                                                                   sep = "<br />"), colors = c("red","blue","green","orange")) %>%
                                           layout(
-                                            xaxis = list(range = c(1969, 2016),zeroline = TRUE, title = ""),
+                                            xaxis = list(range = c(2010, 2019),zeroline = TRUE, title = ""),
                                             yaxis = list(side = 'left', rangemode = "tozero", overlaying = "y", 
                                                          title = 'SQRT(Number of Malaria)',showgrid = TRUE, 
                                                          zeroline = TRUE,showticklabels = TRUE),
@@ -304,12 +304,12 @@ shinyServer(function(input, output, session) {
                                      #m <- list(l = 0,r = 0,b = 0,t = 0, pad = 0, autoexpand = TRUE)
               
                                     p11 <- plot_ly(
-                                                   x = c("DT","KNN","NB", "RF"),
+                                                   x = c("IRS","ITN","CaseMgt", "Pop_Protected"),
                                                    y = c(28,56,65,94),
                                                    type = "bar",
                                                    color = c("DT: 28%","KNN: 56%","NB: 65","RF: 94"),
                                                    showlegend = FALSE) %>%
-                                      layout(title = "Method Evaluation", xaxis = list(title = "Method"), yaxis = list(title = "Accuracy (%)")) %>%
+                                      layout(title = "Malaria Intervention", xaxis = list(title = "Method"), yaxis = list(title = "Coverage (%)")) %>%
                                       config(displayModeBar = F)
               p11  })
             
@@ -438,7 +438,7 @@ shinyServer(function(input, output, session) {
                                      country_data <- country_data()
                                     country_finance_loss <- convert_to_word(sum(country_data$propvalue, na.rm = TRUE))
                                     #country_life_loss <- sum(country_data$nkill, na.rm = TRUE)
-                                    valueBox(paste("$",country_finance_loss,sep = ""),"Total Damages",icon = icon("bank"), color = 'purple') })
+                                    valueBox(paste("$",country_finance_loss,sep = ""),"Total Intervention Cost",icon = icon("bank"), color = 'purple') })
             
             output$totlife_country <- renderValueBox({
 
