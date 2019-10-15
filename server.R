@@ -13,7 +13,7 @@ githubinstall("shinyGlobe")
 
 ##################################################
 library(shiny)
-library(shinyGlobe)
+#library(shinyGlobe)
 library(ggplot2)
 library(dplyr)
 library(ggmap)
