@@ -308,10 +308,10 @@ saveRDS(shiny_logistic, "shiny_logistic.rds")
 
 # 2) Predicting type of terrorist group
 
-data3 <- data3[data3$group_name != "Unknown",]
+ data3 <- data3[data3$group_name != "Unknown",]
 
-data_ml <- subset(data3, select = c(date,latitude, suicide, success, multiple,nkill, longitude,weapon_type,attack_type,target_type,group_name))
-data_ml <- data_ml[complete.cases(data_ml),]
+ data_ml <- subset(data3, select = c(date,latitude, suicide, success, multiple,nkill, longitude,weapon_type,attack_type,target_type,group_name))
+ data_ml <- data_ml[complete.cases(data_ml),]
 
 # Grops by killing
 groups <- aggregate(nkill ~ group_name, data = data_ml, FUN = sum)
@@ -475,9 +475,7 @@ convert_to_word <- function(x) {
 
 # Filter Data
 
-country_name <- c("India", "United States", "Pakistan","Sri Lanka",
-                  "United Kingdom", "Spain", "China", "Peru", "Iraq",
-                  "Iran", "Afghanistan")
+country_name <- c("Angola","Benin","Burundi","Cameroon","Ghana","Ethiopia", "Liberia","Malawi", "Niger","Nigeria")
 saveRDS(country_name,"country_name.rds")
 
 region_name <- levels(data1$region)
@@ -570,7 +568,7 @@ p5 <- plot_ly(attack_category) %>%
             text = ~paste(paste("Total Attacks:", ones), attack_type,
                           sep = "<br />"), colors = c("red","blue","green","orange")) %>%
   layout(
-    xaxis = list(range = c(1969, 2016),zeroline = TRUE, title = ""),
+    xaxis = list(range = c(2009, 2019),zeroline = TRUE, title = ""),
     yaxis = list(side = 'left', rangemode = "tozero", overlaying = "y", 
                  title = 'SQRT(Number of Attacks)',showgrid = TRUE, 
                  zeroline = TRUE,range = c(0, 100),showticklabels = TRUE),
@@ -671,7 +669,7 @@ p5 <- plot_ly(attack_category) %>%
             line = list(width = 2), hoverinfo = "text", text = ~paste(ones,":",attack_type),
             colors = c("red","blue","green","orange")) %>%
   layout(title = 'Deaths by Year',
-         xaxis = list(range = c(1969.5, 2015.5),zeroline = TRUE),
+         xaxis = list(range = c(2009.5, 2019.5),zeroline = TRUE),
          yaxis = list(side = 'left', rangemode = "tozero", overlaying = "y", title = 'SQRT(Number of Attacks)',
                       showgrid = TRUE, zeroline = TRUE,range = c(0, 100),showticklabels = TRUE),
          legend = list(x = 0.1, y = 0.9))
