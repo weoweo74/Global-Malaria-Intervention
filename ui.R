@@ -8,9 +8,9 @@
 #install.packages("devtools")
 
 ############WORK VIA GITHUB is below##############
-#devtools::install_github("trestletech/shinyGlobe", force = TRUE)
-#install.packages("shinyGlobe")
-#githubinstall("shinyGlobe")
+devtools::install_github("trestletech/shinyGlobe", force = TRUE)
+install.packages("shinyGlobe")
+githubinstall("shinyGlobe")
 
 
 ##################################################
