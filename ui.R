@@ -2,22 +2,20 @@
 
 ###################################################
 # for the CRAN version
- # devtools::install_github("trestletech/shinyGlobe", force = TRUE)
+# devtools::install_github("trestletech/shinyGlobe", force = TRUE)
 ###################################################
 # Install devtools, if you haven't already.
 #install.packages("devtools")
 
-devtools::install_github("trestletech/shinyGlobe", force = TRUE)
-install.packages("shinyGlobe")
-githubinstall("shinyGlobe")
+############WORK VIA GITHUB is below##############
+#devtools::install_github("trestletech/shinyGlobe", force = TRUE)
+#install.packages("shinyGlobe")
+#githubinstall("shinyGlobe")
 
 
 ##################################################
 
 
-
-library(devtools)
-install_github("shinyGlobe", "trestletech")
 library(shiny)
 library(shinyGlobe)
 library(ggplot2)
@@ -68,7 +66,7 @@ dashboardPage(skin = "yellow",
                               uiOutput("cityUi"),
                               uiOutput("zipUi")
                             ),
-                            menuItem("Predicting Intervention", tabName = "predict", icon = icon("dashboard"))
+                            menuItem("Forecast Analysis", tabName = "predict", icon = icon("dashboard"))
                             #menuItem("Help", tabName = "help", icon = icon("question-circle"))
                             )),
               dashboardBody(
@@ -223,7 +221,7 @@ dashboardPage(skin = "yellow",
                                        solidHeader = FALSE,
                                        width = 12,
                                        background = "navy",
-                                       sliderInput("hviQuery", label = "Year Range", min = 1970, max = 2015, value = c(1970,2015))
+                                       sliderInput("hviQuery", label = "Year Range", min = 2010, max = 2019, value = c(2010,2019))
                                        #checkboxInput("maxValue", label = "Excluded uncertain attacks", value = FALSE)
                                      ),
                                      box(
@@ -585,7 +583,7 @@ dashboardPage(skin = "yellow",
                                        plotlyOutput("plot5")
                                      ),
                                      box(
-                                       title = "Time-series of IRS(Indoor Residual Spraying)",
+                                       title = "Time-series of IRS(Indoor Residual Spraying",
                                        status = "primary",
                                        width = 6,
                                        solidHeader = TRUE,
