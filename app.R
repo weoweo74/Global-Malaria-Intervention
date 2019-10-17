@@ -2,6 +2,13 @@
 # Install devtools, if you haven't already.
 install.packages("devtools")
 
+# install devtools
+install.packages("devtools")
+# install ggmap from dev space
+devtools::install_github("dkahle/ggmap")
+
+library(ggmap)
+
 ############WORK VIA GITHUB is below##############
 devtools::install_github("trestletech/shinyGlobe", force = TRUE)
 install.packages("shinyGlobe")
