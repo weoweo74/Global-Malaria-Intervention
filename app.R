@@ -12,6 +12,10 @@ library(ggmap)
 #install.packages("devtools")
 devtools::install_github("ropensci/plotly")
 library(plotly)
+
+install.packages("remotes")
+remotes::install_github("fmichelsendis/sendis")
+
 ############WORK VIA GITHUB is below##############
 devtools::install_github("trestletech/shinyGlobe", force = TRUE)
 install.packages("shinyGlobe")
