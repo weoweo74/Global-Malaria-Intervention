@@ -16,6 +16,13 @@ library(plotly)
 install.packages("remotes")
 remotes::install_github("fmichelsendis/sendis")
 
+# install from CRAN
+install.packages('DT')
+
+# or the development version if necessary
+remotes::install_github('rstudio/DT')
+
+
 ############WORK VIA GITHUB is below##############
 devtools::install_github("trestletech/shinyGlobe", force = TRUE)
 install.packages("shinyGlobe")
