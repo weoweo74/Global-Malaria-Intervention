@@ -74,7 +74,7 @@ dashboardPage(skin = "yellow",
                             menuItem("Data Overview", tabName = "globalattack1", icon = icon("area-chart"),
                                      menuSubItem("Global Malaria - I", icon = icon("check-circle"),tabName = "globalattack1"),
                                      menuSubItem("Global Malaria - II", icon = icon("check-circle"), tabName = "globalattack2")),
-                            menuSubItem("Globe Visulization", icon = icon("check-circle"), tabName = "globegl")),
+                            #menuSubItem("Globe Visulization", icon = icon("check-circle"), tabName = "globegl")),
                             menuItem("Intervention by Country", tabName = "bycountry", icon = icon("gears"),badgeLabel = "new", badgeColor = "green"),
                             conditionalPanel(
                               condition = "input.sbm == 'valueAnalysis' || input.sbm == 'trainModels' || input.sbm == 'compareModels' || input.sbm == 'forecast'",
@@ -84,7 +84,7 @@ dashboardPage(skin = "yellow",
                               uiOutput("zipUi")
                             ),
                             menuItem("Forecast Analysis", tabName = "predict", icon = icon("dashboard"))
-                            menuItem("Help", tabName = "help", icon = icon("question-circle"))
+                            #menuItem("Help", tabName = "help", icon = icon("question-circle"))
                 )),
               dashboardBody(
                 useShinyjs(), 
