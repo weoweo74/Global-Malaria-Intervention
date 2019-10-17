@@ -33,7 +33,7 @@ install.packages("shinyGlobe")
 #githubinstall("shinyGlobe")
 
 library(shiny)
-#library(shinyGlobe)
+library(shinyGlobe)
 library(ggplot2)
 library(dplyr)
 library(ggmap)
@@ -46,7 +46,7 @@ library(DT)
 library(leaflet)
 library(shinyjs)
 library(V8)
-#library(reshape)
+library(reshape)
 
 
 dashboardPage(skin = "yellow",
