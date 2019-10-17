@@ -23,7 +23,7 @@ install.packages('DT')
 remotes::install_github('rstudio/DT')
 
 #install.packages("devtools")
-devtools::install_github("hadley/reshape")
+devtools::install_github("hadley/reshape2")
 library(reshape)
 
 
@@ -46,7 +46,7 @@ library(DT)
 library(leaflet)
 library(shinyjs)
 library(V8)
-library(reshape)
+library(reshape2)
 
 
 dashboardPage(skin = "yellow",
