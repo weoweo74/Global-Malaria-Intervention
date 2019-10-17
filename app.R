@@ -22,6 +22,10 @@ install.packages('DT')
 # or the development version if necessary
 remotes::install_github('rstudio/DT')
 
+#install.packages("devtools")
+devtools::install_github("hadley/reshape")
+library(reshape)
+
 
 ############WORK VIA GITHUB is below##############
 devtools::install_github("trestletech/shinyGlobe", force = TRUE)
