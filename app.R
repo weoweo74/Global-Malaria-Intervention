@@ -23,8 +23,8 @@ install.packages('DT')
 remotes::install_github('rstudio/DT')
 
 #install.packages("devtools")
-devtools::install_github("hadley/reshape")
-library(reshape)
+#devtools::install_github("hadley/reshape")
+#library(reshape)
 
 
 ############WORK VIA GITHUB is below##############
