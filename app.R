@@ -84,7 +84,7 @@ dashboardPage(skin = "yellow",
                               uiOutput("zipUi")
                             ),
                             menuItem("Forecast Analysis", tabName = "predict", icon = icon("dashboard"))
-                            #menuItem("Help", tabName = "help", icon = icon("question-circle"))
+                            menuItem("Help", tabName = "help", icon = icon("question-circle"))
                 )),
               dashboardBody(
                 useShinyjs(), 
